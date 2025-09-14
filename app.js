@@ -1,9 +1,6 @@
 const getPokemon = async () => {
   try{
         const pokemonName = document.getElementById('searchName').value.toLowerCase();
-        if(pokemonName === ""){
-            pokemonName = "Pikachu";
-        }
         const pokemonData = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
         if(!pokemonData.ok) {
